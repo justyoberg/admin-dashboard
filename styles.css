@@ -167,13 +167,14 @@ button {
 }
 
 .project-item {
+  display: flex;
+  flex-direction: column;
   border-left: 10px solid goldenrod;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.158);
   padding: 20px;
   background: white;
 }
-
 
 .trend-item {
   display: grid;
@@ -184,6 +185,33 @@ button {
 
 .trend-item > p {
   grid-column: 2 / -1;
+}
+
+.trend-item > p,
+.project-item > p,
+.announce-item > p {
+  color: gray;
+  font-size: 1.1em;
+}
+
+.announce-item {
+  padding: 20px;
+}
+.announce-item:not(:last-child) {
+  border-bottom: 1px solid silver;
+}
+
+.bold {
+  color: rgb(92, 92, 92);
+  font-weight: bold;
+}
+
+.proj-item-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1;
+  gap: 32px;
 }
 
 .sidebar {
